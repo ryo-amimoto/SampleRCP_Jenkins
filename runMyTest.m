@@ -1,0 +1,1 @@
+simOut = sim("Mdl_Sample");
