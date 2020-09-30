@@ -4,3 +4,4 @@ xlsHeader = {'time','InputData','OutputData'};
 xlsData = num2cell(simOut.ScopeData);
 dataSet = vertcat(xlsHeader,xlsData);
 xlswrite("OutputData.xlsx",dataSet);
+open("OutputData.xlsx");
