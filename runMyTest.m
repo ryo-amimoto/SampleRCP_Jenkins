@@ -1,3 +1,6 @@
-save_system("Mdl_Sample");
+%save_system("Mdl_Sample");
 simOut = sim("Mdl_Sample");
-xlswrite("OutputData.xlsx",simOut.ScopeData);
+xlsHeader = {'time','InputData','OutputData'};
+xlsData = num2cell(simOut.ScopeData);
+dataSet = vertcat(xlsHeader,xlsData);
+xlswrite("OutputData.xlsx",dataSet);
