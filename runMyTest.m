@@ -1,4 +1,3 @@
-%save_system("Mdl_Sample");
 simOut = sim("Mdl_Sample");
 xlsHeader = {'time','InputData','OutputData'};
 xlsData = num2cell(simOut.ScopeData);
