@@ -7,7 +7,6 @@ simOut = sim("Mdl_Sample");     % モデルのシミュレーション実行
 xlsHeader = {'time','InputData','OutputData'};
 xlsData = num2cell(simOut.ScopeData);
 dataSet = vertcat(xlsHeader,xlsData);
-xlswrite("OutputData.xlsx",dataSet);
 
 % モデルの期待値データを作成
 eptVal = num2cell(xlsread("ExpectValue.xlsx",1,'C:C'));
