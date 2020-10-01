@@ -9,11 +9,11 @@ xlsData = num2cell(simOut.ScopeData);
 dataSet = vertcat(xlsHeader,xlsData);
 
 % モデルの期待値データを作成
-eptVal = num2cell(xlsread("ExpectValue.xlsx",1,'C:C'));
+eptVal = num2cell(xlsread("TestData.xlsx","期待値計算",'C:C'));
 eptHead = {'EptData'};
 eptData = vertcat(eptHead,eptVal);
 
 % モデルのテスト結果ファイルを作成
 TestData = horzcat(dataSet,eptData);
-xlswrite("TestData.xlsx",TestData);
+xlswrite("TestData.xlsx",TestData,"データ");
 winopen("TestData.xlsx");
